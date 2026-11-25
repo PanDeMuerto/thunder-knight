@@ -1,0 +1,10 @@
+import { launch, openStepped } from '../../tools/qa/stepper.mjs';
+const browser = await launch();
+const { page, context } = await openStepped(browser, 'p390', 'btn');
+const r = await page.evaluate(`(() => { const g = window.__game; g.devScene('hill'); g.devAdvance(4); g.equip('shotgun', 1); __frames(5);
+  const b = document.querySelector('.btn-gun'); const r = b.getBoundingClientRect(); return [b.className, r.x, r.y, r.width, r.height, b.innerHTML.slice(0, 200)]; })()`);
+console.log(r);
+await page.waitForTimeout(700);
+await page.screenshot({ path: 'qa-output/m7/btn-dbg.png' });
+await context.close();
+await browser.close();

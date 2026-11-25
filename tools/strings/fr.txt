@@ -1,0 +1,270 @@
+# French. Tutoiement throughout (Rosie and the prompts speak to the player as a friend). Thunder Knight stays as is.
+title|Thunder Knight
+loading|Chargement…
+pause|Pause
+paused|En pause
+resume|Reprendre
+move|Bouger
+aim|Viser
+shoot|Tirer
+grenade|Grenade
+support|Renfort
+swap|Changer
+swapGuns|Changer d’arme
+riftStrike|Frappe de faille
+sentryGun|Tourelle
+nextWave|Vague suivante
+goTruck|Va au camion
+buy|Acheter
+downCaptain|Abats le capitaine !
+stepAside|Écarte-toi !
+objective.banner|Protège la bannière
+rosie.peasants|Des paysans ! Garde la bannière !
+rosie.upHill|Monte à la bannière !
+rosie.gold|Ooh, de l’or, du vrai !
+rosie.bringGold|Ramène-moi cet or !
+rosie.overHere|Par ici !
+rosie.ready|Prête quand tu veux !
+rosie.run|Ha ! Regarde-les fuir !
+rosie.catch|Attrape ! Des grenades !
+rosie.help|Un peu d’aide ?
+rosie.hero|Du matos pour toi aussi !
+rosie.welcome|Allez, on leur fait peur !
+rosie.lastShop|Dernier achat avant le boss !
+rosie.comeback|J’ai renforcé tes bleus.
+rosie.swap|Deux armes. Change !
+rosie.free|Essaie ça, c’est offert !
+rosie.sentry|Je te prête ma tourelle !
+rosie.armour|Armure ! Gros calibre !
+intro.peasant|Paysans : de l’or facile !
+intro.footman|Fantassins : grenade les blocs !
+intro.captain|Capitaine : ils vont fuir !
+intro.eliteCaptain|Capitaine d’élite : grande déroute !
+intro.archer|Archers : va les chercher !
+intro.shieldWall|Mur de boucliers : contourne-le !
+intro.grudge|Sir Grudge : vise ses flancs !
+intro.rider|Cavaliers : le fusil à pompe !
+intro.firebrand|Incendiaire : tire tôt !
+intro.manAtArms|Hommes d’armes : les fusils !
+intro.warWagon|Chariot de guerre : casse ses roues !
+intro.brute|Brute : esquive la charge !
+intro.ram|Bélier : abats ses porteurs !
+intro.catapult|Catapulte : regarde les ombres !
+intro.siegeTower|Tour de siège : vise les poutres !
+intro.ironOx|Bœuf de fer : évite le feu !
+boss.grudge|Sir Grudge
+boss.wagon|Le Chariot de guerre
+boss.tower|La Tour de siège
+boss.ox|Le Baron de Fer
+pause.settings|Réglages
+pause.leave|Quitter la bataille ?
+pause.leaveYes|Quitter
+pause.leaveNo|Rester
+pause.keepGold|Tu gardes ton or
+settings.title|Réglages
+settings.back|Retour
+settings.sound|Son
+settings.music|Musique
+settings.sensitivity|Vitesse de visée
+settings.invertY|Inverser la visée
+settings.autoFireMouse|Tir auto (souris)
+settings.autoFireTouch|Tir auto
+settings.aimAssist|Aide à la visée
+settings.waveIntros|Intros de vague
+settings.shake|Tremblement
+settings.graphics|Graphismes
+settings.hudScale|Taille de l’interface
+settings.leftHanded|Gaucher
+settings.vibration|Vibration
+settings.reducedMotion|Réduire les animations
+settings.language|Langue
+settings.credits|Crédits
+credits.models|Modèles 3D
+credits.sound|Sons et musique
+credits.rest|Tout le reste a été créé pour ce jeu.
+value.on|Oui
+value.off|Non
+value.normal|Normal
+value.strong|Fort
+value.full|Complet
+value.short|Court
+value.low|Bas
+value.lowest|Minimum
+value.high|Élevé
+value.auto|Auto
+battle.title|Bataille {n} : {name}
+battle.wave|Vague {n}/{total}
+battle.ready|Prépare-toi !
+battle.cleared|Vague terminée ! +{gold}
+battle.truck|Le camion de Rosie est ouvert
+battle.atBanner|Ils sont à la bannière !
+battle.knocked|Debout dans {s}
+battle.rout|DÉROUTE !
+battle.lastShop|Dernier achat avant le boss !
+battle.bossHalf|Il a jeté son bouclier !
+battle.wagonStall|Chariot bloqué ! Fantassins !
+battle.towerStall|Tour bloquée ! Vise les poutres !
+battle.oxSummon|Les capitaines d’élite arrivent !
+laststand.title|Dernier rempart : {name}
+laststand.wave|Vague {n} · record {best}
+laststand.waveFirst|Vague {n}
+laststand.next|La vague {n} arrive !
+laststand.over|La bannière est tombée !
+laststand.held|Tu as tenu {n} vagues
+laststand.bestLabel|Record
+laststand.gold|Or gardé
+laststand.newBest|Nouveau record !
+laststand.again|Rejouer
+map.lastStand|Dernier rempart
+map.lastStandBest|Dernier rempart · {n}
+battle.oxCore|Le cœur ! Les roquettes !
+battle.baronFlees|Le Baron s’enfuit !
+rosie.donkey|C’était… un âne ?
+ending.ada|Reine Ada
+ending.rosie|Rosie
+ending.line1|Tu as réussi ! Larkmoor est libre !
+ending.line2|Et le Baron est parti à dos d’âne.
+ending.line3|Il reviendra. Garderas-tu nos champs ?
+ending.line4|Des vagues sans fin ? Je garde le camion prêt !
+ending.skip|Passer
+ending.title|Larkmoor est libre !
+ending.unlock|Dernier rempart débloqué
+ending.unlockHint|Des vagues sans fin sur tout champ gagné
+ending.toMap|Vers la carte
+victory.title|Victoire !
+victory.kills|Mis K.-O.
+victory.waves|Primes de vague
+victory.firstClear|Première victoire
+continue|Continuer
+defeat.title|La bannière est tombée !
+defeat.keep|Tu gardes +{gold} or
+retry|Réessayer
+map|Carte
+offer.double|Or doublé
+offer.rally|Ralliement
+offer.open|Ouvrir
+offer.noThanks|Non merci
+offer.crate|Emprunter : {gun} ?
+offer.crateText|Pour une vague
+victory.doubled|Doublé !
+battle.rallied|Ralliement !
+battle.loan|{gun} pour une vague !
+rosie.crate|Un truc est tombé !
+rosie.saving|Tu économises pour ça ?
+pause.retreat|Retour à la carte
+map.title|Larkmoor
+map.fight|Au combat !
+map.truck|Camion
+map.waves|{n} vagues
+map.firstClear|Première victoire +{gold}
+map.locked|Gagne d’abord la bataille {n}
+map.soon|Bientôt
+map.new|Nouveau : {what}
+region.1|Prés de Larkmoor
+region.2|Les Terres du Fleuve
+region.3|Col des Hautes-Terres
+region.4|Le Donjon de Fer
+ada.region.1|Garde les prés, étranger !
+ada.region.2|Ses cavaliers traversent le fleuve !
+ada.region.3|Ses engins de siège montent le col !
+ada.region.4|Marchons sur son donjon !
+ada.end.1|Les prés sont libres ! Vers le fleuve !
+ada.end.2|Le fleuve est à nous ! Aux hautes terres.
+ada.end.3|Le col est à nous ! Reste son donjon.
+ada.free|Larkmoor est libre. Merci, Thunder Knight !
+battle.name.1|Le Moulin
+battle.name.2|Champ de navets
+battle.name.3|Vieux pont de pierre
+battle.name.4|Ferme du Creux
+battle.name.5|Colline de Grudge
+battle.name.6|Gué des Roseaux
+battle.name.7|Village du Marais
+battle.name.8|Le Bac
+battle.name.9|Palissade des Saules
+battle.name.10|La Longue Route
+battle.name.11|Porte des Pins
+battle.name.12|Vieille tour de guet
+battle.name.13|Repos du Berger
+battle.name.14|La Falaise
+battle.name.15|Col des Échos
+battle.name.16|Verger brûlé
+battle.name.17|Route des Douves
+battle.name.18|Le Châtelet
+battle.name.19|Cour intérieure
+battle.name.20|Le Donjon de Fer
+battle.new.1|Paysans et leur capitaine
+battle.new.2|Fantassins, grenades, milice
+battle.new.3|Archers, l’onglet Héros, la bannière
+battle.new.4|Mur de boucliers, fusil à pompe, caisse
+battle.new.5|Sir Grudge
+battle.new.6|Cavaliers, mitraillette, 2e arme
+battle.new.7|Incendiaires
+battle.new.8|Frappe de faille, fusil d’assaut
+battle.new.9|Hommes d’armes
+battle.new.10|Le Chariot de guerre
+battle.new.11|La Brute
+battle.new.12|Bélier, mitrailleuse
+battle.new.13|Chevaliers, tourelle
+battle.new.14|Catapultes, lance-grenades
+battle.new.15|La Tour de siège
+battle.new.16|Minigun
+battle.new.17|Béliers et catapultes
+battle.new.18|Capitaines d’élite, roquettes
+battle.new.19|Tout à la fois
+battle.new.20|Le Baron de Fer
+shop.title|Le camion de Rosie
+shop.rosie|Tout droit de la faille !
+shop.tab.guns|Armes
+shop.tab.hero|Héros
+shop.tab.army|Armée
+shop.close|Fermer
+shop.more|Encore {gold}
+shop.equip|Équiper
+shop.equipped|Équipé
+shop.max|Max
+shop.locked|Bataille {n}
+shop.best|Bon plan
+shop.goal|Économise pour ça
+shop.levelUp|Frappe plus fort, contient plus
+gun.pistol|Pistolet
+gun.shotgun|Fusil à pompe
+gun.smg|Mitraillette
+gun.assaultRifle|Fusil d’assaut
+gun.huntingRifle|Fusil de chasse
+gun.machineGun|Mitrailleuse
+gun.grenadeLauncher|Lance-grenades
+gun.minigun|Minigun
+gun.rocketLauncher|Lance-roquettes
+gun.pistol.note|Léger et fiable
+gun.shotgun.note|Les repousse de près
+gun.smg.note|Arrose une foule vite
+gun.assaultRifle.note|Traverse 2 soldats
+gun.huntingRifle.note|Traverse 6 soldats
+gun.machineGun.note|Tient tout un couloir
+gun.grenadeLauncher.note|Éclate sur les groupes
+gun.minigun.note|Un mur de balles
+gun.rocketLauncher.note|Pour les gros morceaux
+hero.health|Robustesse
+hero.health.note|+20 santé
+hero.speed|Bottes
+hero.speed.note|Cours plus vite
+hero.grenades|Ceinture à grenades
+hero.grenades.note|+1 grenade par vague
+hero.magnet|Aimant à or
+hero.magnet.note|Les pièces viennent de plus loin
+army.militia|Milice
+army.militia.note|+2 soldats à la bannière
+army.archers|Archers
+army.archers.note|Des volées depuis la bannière
+army.menAtArms|Hommes d’armes
+army.menAtArms.note|Une ligne en armure
+support.riftStrike|Frappe de faille
+support.riftStrike.note|Une pluie d’obus sur la foule (E)
+support.sentryGun|Tourelle
+support.sentryGun.note|Une tourelle se bat à tes côtés (E)
+army.knights|Chevaliers
+army.knights.note|Des cavaliers qui chargent
+army.banner|Bannière
+army.banner.note|+20 % de santé de bannière
+error.start|Le jeu n’a pas pu démarrer sur cet appareil. Essaie un autre navigateur ou mets celui-ci à jour.
+error.noSave|La progression ne peut pas être sauvegardée dans cette fenêtre.

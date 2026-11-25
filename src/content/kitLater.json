@@ -1,0 +1,26 @@
+{
+  "note": "Field kit pieces no Region 1 battle uses (M11). npm run assets:field puts them in kit-later.glb, which the game fetches after its first load and waits for before a later region's battle; tests/kitSplit.test.ts checks Region 1 never needs one.",
+  "later": [
+    "wall",
+    "wallGate",
+    "treesLarge",
+    "treesMedium",
+    "reedA",
+    "reedB",
+    "reedC",
+    "lilyA",
+    "lilyB",
+    "stump",
+    "treeRound",
+    "mountainA",
+    "mountainB",
+    "mountainC",
+    "castle",
+    "ruin",
+    "wallCorner",
+    "weaponrack",
+    "treeBurnt",
+    "treesBurnt",
+    "stumpBurnt"
+  ]
+}

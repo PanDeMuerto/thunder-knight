@@ -1,0 +1,270 @@
+# Korean. Rosie speaks casually (반말), Queen Ada politely (해요체). Thunder Knight stays as is; Larkmoor 라크무어, Rosie 로지.
+title|Thunder Knight
+loading|불러오는 중…
+pause|일시정지
+paused|일시정지됨
+resume|계속
+move|이동
+aim|조준
+shoot|사격
+grenade|수류탄
+support|지원
+swap|교체
+swapGuns|무기 교체
+riftStrike|균열 타격
+sentryGun|센트리 건
+nextWave|다음 웨이브
+goTruck|트럭으로 가기
+buy|구매
+downCaptain|대장을 쓰러뜨려!
+stepAside|비켜!
+objective.banner|깃발을 지켜라
+rosie.peasants|농민들이야! 깃발을 지켜!
+rosie.upHill|깃발로 올라가!
+rosie.gold|우와, 진짜 금이다!
+rosie.bringGold|그 금 이리 가져와!
+rosie.overHere|여기야!
+rosie.ready|준비되면 말해!
+rosie.run|하! 도망가는 것 좀 봐!
+rosie.catch|받아! 수류탄!
+rosie.help|도움 좀 고용할래?
+rosie.hero|너도 새 장비야!
+rosie.welcome|겁 좀 줘 보자!
+rosie.lastShop|보스 전 마지막 쇼핑!
+rosie.comeback|네 파란 병사들 강화해 뒀어.
+rosie.swap|이제 총이 두 개. 바꿔 봐!
+rosie.free|이거 써 봐, 공짜야!
+rosie.sentry|내 센트리 건 빌려줄게!
+rosie.armour|갑옷! 더 큰 총!
+intro.peasant|농민: 쉬운 금화!
+intro.footman|보병: 밀집에 수류탄!
+intro.captain|대장: 쓰러지면 도망쳐!
+intro.eliteCaptain|정예 대장: 대혼란!
+intro.archer|궁수: 가서 잡아!
+intro.shieldWall|방패벽: 돌아가!
+intro.grudge|그러지 경: 옆을 쳐!
+intro.rider|기병: 샷건으로 막아!
+intro.firebrand|방화병: 일찍 쏴!
+intro.manAtArms|중갑병: 소총을 써!
+intro.warWagon|전투 마차: 바퀴를 부숴!
+intro.brute|거한: 돌진을 피해!
+intro.ram|공성추: 운반병을 쓰러뜨려!
+intro.catapult|투석기: 그림자를 봐!
+intro.siegeTower|공성탑: 들보를 쏴!
+intro.ironOx|강철 황소: 불을 피해!
+boss.grudge|그러지 경
+boss.wagon|전투 마차
+boss.tower|공성탑
+boss.ox|강철 남작
+pause.settings|설정
+pause.leave|전투를 떠날까요?
+pause.leaveYes|떠나기
+pause.leaveNo|남기
+pause.keepGold|골드는 유지돼요
+settings.title|설정
+settings.back|뒤로
+settings.sound|효과음
+settings.music|음악
+settings.sensitivity|시점 속도
+settings.invertY|시점 반전
+settings.autoFireMouse|자동 사격(마우스)
+settings.autoFireTouch|자동 사격
+settings.aimAssist|조준 보조
+settings.waveIntros|웨이브 연출
+settings.shake|카메라 흔들림
+settings.graphics|그래픽
+settings.hudScale|HUD 크기
+settings.leftHanded|왼손잡이
+settings.vibration|진동
+settings.reducedMotion|움직임 줄이기
+settings.language|언어
+settings.credits|크레딧
+credits.models|3D 모델
+credits.sound|사운드와 음악
+credits.rest|그 밖의 모든 것은 이 게임을 위해 만들었습니다.
+value.on|켜기
+value.off|끄기
+value.normal|보통
+value.strong|강하게
+value.full|전체
+value.short|짧게
+value.low|낮음
+value.lowest|최저
+value.high|높음
+value.auto|자동
+battle.title|전투 {n}: {name}
+battle.wave|웨이브 {n}/{total}
+battle.ready|준비!
+battle.cleared|웨이브 클리어! +{gold}
+battle.truck|로지의 트럭이 열렸어
+battle.atBanner|깃발까지 왔어!
+battle.knocked|{s}초 후 일어남
+battle.rout|패주!
+battle.lastShop|보스 전 마지막 쇼핑!
+battle.bossHalf|방패를 던졌다!
+battle.wagonStall|마차가 멈췄다! 보병!
+battle.towerStall|탑이 멈췄다! 들보를 쏴!
+battle.oxSummon|정예 대장 합류!
+laststand.title|최후의 저항: {name}
+laststand.wave|웨이브 {n} · 최고 {best}
+laststand.waveFirst|웨이브 {n}
+laststand.next|웨이브 {n} 온다!
+laststand.over|깃발이 쓰러졌다!
+laststand.held|{n}웨이브를 버텼어요
+laststand.bestLabel|최고 기록
+laststand.gold|남은 골드
+laststand.newBest|신기록!
+laststand.again|다시
+map.lastStand|최후의 저항
+map.lastStandBest|최후의 저항 · {n}
+battle.oxCore|코어다! 로켓!
+battle.baronFlees|남작이 도망친다!
+rosie.donkey|저거… 당나귀야?
+ending.ada|에이다 여왕
+ending.rosie|로지
+ending.line1|해냈어요! 라크무어가 자유를 찾았어요!
+ending.line2|그리고 남작은 당나귀 타고 도망갔지.
+ending.line3|그는 돌아올 거예요. 우리 들판을 지켜 줄래요?
+ending.line4|끝없는 웨이브? 트럭은 계속 돌려 둘게!
+ending.skip|건너뛰기
+ending.title|라크무어는 자유다!
+ending.unlock|최후의 저항 잠금 해제
+ending.unlockHint|승리한 모든 전장에서 끝없는 웨이브
+ending.toMap|지도로
+victory.title|승리!
+victory.kills|쓰러뜨림
+victory.waves|웨이브 보너스
+victory.firstClear|첫 승리
+continue|계속
+defeat.title|깃발이 쓰러졌다!
+defeat.keep|+{gold} 골드는 유지
+retry|다시 하기
+map|지도
+offer.double|골드 2배
+offer.rally|반격
+offer.open|열기
+offer.noThanks|괜찮아요
+offer.crate|{gun} 빌릴까요?
+offer.crateText|한 웨이브 동안
+victory.doubled|2배!
+battle.rallied|반격!
+battle.loan|{gun}, 한 웨이브 동안!
+rosie.crate|뭔가 떨어졌어!
+rosie.saving|저거 사려고 모으는 중?
+pause.retreat|지도로 돌아가기
+map.title|라크무어
+map.fight|출전!
+map.truck|트럭
+map.waves|{n}웨이브
+map.firstClear|첫 승리 +{gold}
+map.locked|전투 {n}부터 이기세요
+map.soon|곧 공개
+map.new|새로움: {what}
+region.1|라크무어 초원
+region.2|강의 땅
+region.3|고원 고개
+region.4|강철 성채
+ada.region.1|초원을 지켜 줘요, 이방인!
+ada.region.2|그의 기병이 강을 건너요!
+ada.region.3|그의 공성 병기가 고개를 올라요!
+ada.region.4|이제 그의 성채로 진군해요!
+ada.end.1|초원이 자유로워졌어요! 강으로!
+ada.end.2|강을 되찾았어요! 이제 고원으로.
+ada.end.3|고개는 우리 것! 그의 성채만 남았어요.
+ada.free|라크무어는 자유예요. 고마워요, Thunder Knight!
+battle.name.1|방앗간
+battle.name.2|순무 밭
+battle.name.3|오래된 돌다리
+battle.name.4|움푹한 농장
+battle.name.5|그러지의 언덕
+battle.name.6|갈대 여울
+battle.name.7|늪 마을
+battle.name.8|나루터
+battle.name.9|버드나무 울타리
+battle.name.10|긴 길
+battle.name.11|소나무 문
+battle.name.12|오래된 망루
+battle.name.13|목동의 쉼터
+battle.name.14|절벽
+battle.name.15|메아리 고개
+battle.name.16|불탄 과수원
+battle.name.17|해자 길
+battle.name.18|성문 탑
+battle.name.19|안뜰
+battle.name.20|강철 성채
+battle.new.1|농민과 그들의 대장
+battle.new.2|보병, 수류탄, 민병대
+battle.new.3|궁수, 영웅 탭, 깃발
+battle.new.4|방패벽, 샷건, 상자
+battle.new.5|그러지 경
+battle.new.6|기병, SMG, 두 번째 총
+battle.new.7|방화병
+battle.new.8|균열 타격, 돌격소총
+battle.new.9|중갑병
+battle.new.10|전투 마차
+battle.new.11|거한
+battle.new.12|공성추, 기관총
+battle.new.13|기사, 센트리 건
+battle.new.14|투석기, 유탄 발사기
+battle.new.15|공성탑
+battle.new.16|미니건
+battle.new.17|공성추와 투석기
+battle.new.18|정예 대장, 로켓
+battle.new.19|전부 다
+battle.new.20|강철 남작
+shop.title|로지의 트럭
+shop.rosie|균열에서 막 도착!
+shop.tab.guns|총
+shop.tab.hero|영웅
+shop.tab.army|군대
+shop.close|닫기
+shop.more|{gold} 더 필요
+shop.equip|장착
+shop.equipped|장착됨
+shop.max|최대
+shop.locked|전투 {n}
+shop.best|추천
+shop.goal|이걸 위해 모으기
+shop.levelUp|더 세게, 더 많이
+gun.pistol|권총
+gun.shotgun|샷건
+gun.smg|SMG
+gun.assaultRifle|돌격소총
+gun.huntingRifle|사냥용 소총
+gun.machineGun|기관총
+gun.grenadeLauncher|유탄 발사기
+gun.minigun|미니건
+gun.rocketLauncher|로켓 발사기
+gun.pistol.note|가볍고 믿음직함
+gun.shotgun.note|가까이서 밀쳐 냄
+gun.smg.note|무리를 빠르게 쓸어 버림
+gun.assaultRifle.note|병사 2명 관통
+gun.huntingRifle.note|병사 6명 관통
+gun.machineGun.note|한 통로를 통째로 막음
+gun.grenadeLauncher.note|무리 속에서 폭발
+gun.minigun.note|총알의 벽
+gun.rocketLauncher.note|큰 것들용
+hero.health|맷집
+hero.health.note|체력 +20
+hero.speed|부츠
+hero.speed.note|더 빨리 달리기
+hero.grenades|수류탄 벨트
+hero.grenades.note|웨이브마다 수류탄 +1
+hero.magnet|골드 자석
+hero.magnet.note|더 멀리서 동전이 날아옴
+army.militia|민병대
+army.militia.note|깃발에 병사 +2
+army.archers|궁수
+army.archers.note|깃발 뒤에서 일제 사격
+army.menAtArms|중갑병
+army.menAtArms.note|갑옷 입은 전열
+support.riftStrike|균열 타격
+support.riftStrike.note|무리에 포탄이 쏟아짐 (E)
+support.sentryGun|센트리 건
+support.sentryGun.note|포탑이 곁에서 싸움 (E)
+army.knights|기사
+army.knights.note|돌격하는 기병
+army.banner|깃발
+army.banner.note|깃발 체력 +20%
+error.start|이 기기에서 게임을 시작할 수 없습니다. 다른 브라우저를 쓰거나 이 브라우저를 업데이트하세요.
+error.noSave|이 브라우저 창에서는 진행 상황을 저장할 수 없습니다.

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "state": {
+    "gold": 50,
+    "battles": {},
+    "guns": { "pistol": 1 },
+    "hand": ["pistol", null],
+    "support": { "owned": {}, "equipped": null },
+    "hero": { "health": 0, "speed": 0, "grenades": 0, "magnet": 0 },
+    "army": { "militia": 0, "archers": 0, "menAtArms": 0, "knights": 0, "banner": 0 },
+    "seenLessons": [],
+    "stats": { "knockouts": 0, "routs": 0, "playSeconds": 42.5, "battlesWon": 0 },
+    "lastStand": {}
+  }
+}

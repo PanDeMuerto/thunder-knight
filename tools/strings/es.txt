@@ -1,0 +1,270 @@
+# Spanish (neutral). Rosie and the prompts use "tú". Thunder Knight stays as is.
+title|Thunder Knight
+loading|Cargando…
+pause|Pausa
+paused|En pausa
+resume|Seguir
+move|Moverse
+aim|Apuntar
+shoot|Disparar
+grenade|Granada
+support|Apoyo
+swap|Cambiar
+swapGuns|Cambiar arma
+riftStrike|Golpe de grieta
+sentryGun|Torreta
+nextWave|Siguiente oleada
+goTruck|Ve a la camioneta
+buy|Comprar
+downCaptain|¡Derriba al capitán!
+stepAside|¡Apártate!
+objective.banner|Protege el estandarte
+rosie.peasants|¡Campesinos! ¡Protege el estandarte!
+rosie.upHill|¡Sube al estandarte!
+rosie.gold|¡Uy, oro de verdad!
+rosie.bringGold|¡Trae ese oro aquí!
+rosie.overHere|¡Por aquí!
+rosie.ready|¡Lista cuando quieras!
+rosie.run|¡Ja! ¡Míralos correr!
+rosie.catch|¡Toma! ¡Granadas!
+rosie.help|¿Contratas ayuda?
+rosie.hero|¡Equipo nuevo para ti también!
+rosie.welcome|¡Vamos a darles un susto!
+rosie.lastShop|¡Última compra antes del jefe!
+rosie.comeback|He mejorado a tus azules.
+rosie.swap|Dos armas ya. ¡Cámbialas!
+rosie.free|¡Prueba esto, invita la casa!
+rosie.sentry|¡Te presto mi torreta!
+rosie.armour|¡Armadura! ¡Arma más grande!
+intro.peasant|Campesinos: ¡oro fácil!
+intro.footman|Infantes: ¡granadas a los bloques!
+intro.captain|Capitán: ¡huirán!
+intro.eliteCaptain|Capitán de élite: ¡gran desbandada!
+intro.archer|Arqueros: ¡ve a por ellos!
+intro.shieldWall|Muro de escudos: ¡rodéalo!
+intro.grudge|Sir Grudge: ¡dale en los flancos!
+intro.rider|Jinetes: ¡la escopeta los frena!
+intro.firebrand|Incendiario: ¡dispárale pronto!
+intro.manAtArms|Hombres de armas: ¡usa rifles!
+intro.warWagon|Carro de guerra: ¡rompe sus ruedas!
+intro.brute|Bruto: ¡esquiva la carga!
+intro.ram|Ariete: ¡derriba a su equipo!
+intro.catapult|Catapulta: ¡mira las sombras!
+intro.siegeTower|Torre de asedio: ¡dispara a las vigas!
+intro.ironOx|Buey de hierro: ¡esquiva el fuego!
+boss.grudge|Sir Grudge
+boss.wagon|El Carro de guerra
+boss.tower|La Torre de asedio
+boss.ox|El Barón de Hierro
+pause.settings|Ajustes
+pause.leave|¿Abandonar la batalla?
+pause.leaveYes|Abandonar
+pause.leaveNo|Quedarse
+pause.keepGold|Conservas tu oro
+settings.title|Ajustes
+settings.back|Atrás
+settings.sound|Sonido
+settings.music|Música
+settings.sensitivity|Velocidad de vista
+settings.invertY|Invertir vista
+settings.autoFireMouse|Disparo auto (ratón)
+settings.autoFireTouch|Disparo auto
+settings.aimAssist|Ayuda al apuntar
+settings.waveIntros|Intros de oleada
+settings.shake|Temblor de cámara
+settings.graphics|Gráficos
+settings.hudScale|Tamaño del HUD
+settings.leftHanded|Zurdo
+settings.vibration|Vibración
+settings.reducedMotion|Reducir movimiento
+settings.language|Idioma
+settings.credits|Créditos
+credits.models|Modelos 3D
+credits.sound|Sonido y música
+credits.rest|Todo lo demás se hizo para este juego.
+value.on|Sí
+value.off|No
+value.normal|Normal
+value.strong|Fuerte
+value.full|Completo
+value.short|Corto
+value.low|Bajo
+value.lowest|Mínimo
+value.high|Alto
+value.auto|Auto
+battle.title|Batalla {n}: {name}
+battle.wave|Oleada {n}/{total}
+battle.ready|¡Prepárate!
+battle.cleared|¡Oleada superada! +{gold}
+battle.truck|La camioneta de Rosie está abierta
+battle.atBanner|¡Están en el estandarte!
+battle.knocked|De pie en {s}
+battle.rout|¡DESBANDADA!
+battle.lastShop|¡Última compra antes del jefe!
+battle.bossHalf|¡Ha tirado su escudo!
+battle.wagonStall|¡Carro atascado! ¡Infantes!
+battle.towerStall|¡Torre atascada! ¡Dispara a las vigas!
+battle.oxSummon|¡Llegan capitanes de élite!
+laststand.title|Última resistencia: {name}
+laststand.wave|Oleada {n} · récord {best}
+laststand.waveFirst|Oleada {n}
+laststand.next|¡Llega la oleada {n}!
+laststand.over|¡El estandarte ha caído!
+laststand.held|Aguantaste {n} oleadas
+laststand.bestLabel|Récord
+laststand.gold|Oro conservado
+laststand.newBest|¡Nuevo récord!
+laststand.again|Otra vez
+map.lastStand|Última resistencia
+map.lastStandBest|Última resistencia · {n}
+battle.oxCore|¡El núcleo! ¡Cohetes!
+battle.baronFlees|¡El Barón huye!
+rosie.donkey|¿Eso era... un burro?
+ending.ada|Reina Ada
+ending.rosie|Rosie
+ending.line1|¡Lo lograste! ¡Larkmoor es libre!
+ending.line2|Y el Barón se fue en burro.
+ending.line3|Volverá. ¿Protegerás nuestros campos?
+ending.line4|¿Oleadas sin fin? ¡La camioneta seguirá en marcha!
+ending.skip|Saltar
+ending.title|¡Larkmoor es libre!
+ending.unlock|Última resistencia desbloqueada
+ending.unlockHint|Oleadas sin fin en cada campo ganado
+ending.toMap|Al mapa
+victory.title|¡Victoria!
+victory.kills|Derribados
+victory.waves|Bonus de oleada
+victory.firstClear|Primera victoria
+continue|Continuar
+defeat.title|¡El estandarte ha caído!
+defeat.keep|Conservas +{gold} de oro
+retry|Reintentar
+map|Mapa
+offer.double|Oro doble
+offer.rally|Reagrupar
+offer.open|Abrir
+offer.noThanks|No, gracias
+offer.crate|¿Tomar prestado: {gun}?
+offer.crateText|Durante una oleada
+victory.doubled|¡Duplicado!
+battle.rallied|¡Reagrupados!
+battle.loan|¡{gun} durante una oleada!
+rosie.crate|¡Algo se ha caído!
+rosie.saving|¿Ahorras para eso?
+pause.retreat|Volver al mapa
+map.title|Larkmoor
+map.fight|¡A luchar!
+map.truck|Camioneta
+map.waves|{n} oleadas
+map.firstClear|Primera victoria +{gold}
+map.locked|Gana antes la batalla {n}
+map.soon|Pronto
+map.new|Novedad: {what}
+region.1|Prados de Larkmoor
+region.2|Las Tierras del Río
+region.3|Paso de las Tierras Altas
+region.4|La Fortaleza de Hierro
+ada.region.1|¡Protege los prados, forastero!
+ada.region.2|¡Sus jinetes cruzan el río!
+ada.region.3|¡Sus máquinas de asedio suben el paso!
+ada.region.4|¡Ahora marchamos hacia su fortaleza!
+ada.end.1|¡Los prados son libres! ¡Al río!
+ada.end.2|¡El río es nuestro! Ahora las tierras altas.
+ada.end.3|¡El paso es nuestro! Solo queda su fortaleza.
+ada.free|Larkmoor es libre. ¡Gracias, Thunder Knight!
+battle.name.1|El Molino
+battle.name.2|Campo de nabos
+battle.name.3|Viejo puente de piedra
+battle.name.4|Granja de la Hondonada
+battle.name.5|Colina de Grudge
+battle.name.6|Vado de los Juncos
+battle.name.7|Aldea del Pantano
+battle.name.8|El Transbordador
+battle.name.9|Empalizada de los Sauces
+battle.name.10|El Camino Largo
+battle.name.11|Puerta de los Pinos
+battle.name.12|Vieja atalaya
+battle.name.13|Descanso del Pastor
+battle.name.14|El Acantilado
+battle.name.15|Paso de los Ecos
+battle.name.16|Huerto quemado
+battle.name.17|Camino del Foso
+battle.name.18|El Cuerpo de Guardia
+battle.name.19|Patio interior
+battle.name.20|La Fortaleza de Hierro
+battle.new.1|Campesinos y su capitán
+battle.new.2|Infantes, granadas, milicia
+battle.new.3|Arqueros, la pestaña Héroe, el estandarte
+battle.new.4|Muro de escudos, escopeta, caja
+battle.new.5|Sir Grudge
+battle.new.6|Jinetes, subfusil, segunda arma
+battle.new.7|Incendiarios
+battle.new.8|Golpe de grieta, fusil de asalto
+battle.new.9|Hombres de armas
+battle.new.10|El Carro de guerra
+battle.new.11|El Bruto
+battle.new.12|Ariete, ametralladora
+battle.new.13|Caballeros, torreta
+battle.new.14|Catapultas, lanzagranadas
+battle.new.15|La Torre de asedio
+battle.new.16|Minigun
+battle.new.17|Arietes y catapultas
+battle.new.18|Capitanes de élite, cohetes
+battle.new.19|Todo a la vez
+battle.new.20|El Barón de Hierro
+shop.title|La camioneta de Rosie
+shop.rosie|¡Recién salido de la grieta!
+shop.tab.guns|Armas
+shop.tab.hero|Héroe
+shop.tab.army|Ejército
+shop.close|Cerrar
+shop.more|Faltan {gold}
+shop.equip|Equipar
+shop.equipped|Equipado
+shop.max|Máx.
+shop.locked|Batalla {n}
+shop.best|Mejor compra
+shop.goal|Ahorra para esto
+shop.levelUp|Pega más fuerte, carga más
+gun.pistol|Pistola
+gun.shotgun|Escopeta
+gun.smg|Subfusil
+gun.assaultRifle|Fusil de asalto
+gun.huntingRifle|Rifle de caza
+gun.machineGun|Ametralladora
+gun.grenadeLauncher|Lanzagranadas
+gun.minigun|Minigun
+gun.rocketLauncher|Lanzacohetes
+gun.pistol.note|Ligera y fiable
+gun.shotgun.note|Los repele de cerca
+gun.smg.note|Barre una multitud rápido
+gun.assaultRifle.note|Atraviesa 2 soldados
+gun.huntingRifle.note|Atraviesa 6 soldados
+gun.machineGun.note|Aguanta todo un carril
+gun.grenadeLauncher.note|Estalla en los grupos
+gun.minigun.note|Un muro de balas
+gun.rocketLauncher.note|Para cosas grandes
+hero.health|Aguante
+hero.health.note|+20 de salud
+hero.speed|Botas
+hero.speed.note|Corre más rápido
+hero.grenades|Cinturón de granadas
+hero.grenades.note|+1 granada por oleada
+hero.magnet|Imán de oro
+hero.magnet.note|Las monedas llegan desde más lejos
+army.militia|Milicia
+army.militia.note|+2 soldados en el estandarte
+army.archers|Arqueros
+army.archers.note|Andanadas desde detrás del estandarte
+army.menAtArms|Hombres de armas
+army.menAtArms.note|Una línea con armadura
+support.riftStrike|Golpe de grieta
+support.riftStrike.note|Llueven proyectiles sobre una multitud (E)
+support.sentryGun|Torreta
+support.sentryGun.note|Una torreta lucha a tu lado (E)
+army.knights|Caballeros
+army.knights.note|Jinetes que cargan
+army.banner|Estandarte
+army.banner.note|+20 % de salud del estandarte
+error.start|El juego no pudo iniciarse en este dispositivo. Prueba otro navegador o actualiza este.
+error.noSave|El progreso no se puede guardar en esta ventana del navegador.

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+# Release zips are rebuilt by `npm run package`; the store media for Poki is kept.
+release/*
+!release/poki-submission/
+coverage/
+# Review output (pictures, clips, builds) stays local; the review scripts referenced in CLAUDE.md are kept.
+qa-output/**
+!qa-output/**/
+!qa-output/m*/*.mjs
+*.log
+.DS_Store
+Thumbs.db
+*.blend1
+*.tsbuildinfo
+.env.local
+
+.cache/
+dist-itch/

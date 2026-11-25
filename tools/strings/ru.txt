@@ -1,0 +1,270 @@
+# Russian. Rosie and the prompts say "ты". Thunder Knight stays as is; Larkmoor is Ларкмур, Rosie is Рози.
+title|Thunder Knight
+loading|Загрузка…
+pause|Пауза
+paused|Пауза
+resume|Продолжить
+move|Двигайся
+aim|Целься
+shoot|Стреляй
+grenade|Граната
+support|Поддержка
+swap|Сменить
+swapGuns|Сменить оружие
+riftStrike|Удар разлома
+sentryGun|Турель
+nextWave|Следующая волна
+goTruck|Иди к пикапу
+buy|Купить
+downCaptain|Сбей капитана!
+stepAside|Отойди!
+objective.banner|Защити знамя
+rosie.peasants|Крестьяне! Защищай знамя!
+rosie.upHill|Наверх, к знамени!
+rosie.gold|О, настоящее золото!
+rosie.bringGold|Неси золото сюда!
+rosie.overHere|Сюда!
+rosie.ready|Готова, когда скажешь!
+rosie.run|Ха! Гляди, бегут!
+rosie.catch|Лови! Гранаты!
+rosie.help|Нанять подмогу?
+rosie.hero|И тебе новое снаряжение!
+rosie.welcome|Давай их напугаем!
+rosie.lastShop|Последняя покупка перед боссом!
+rosie.comeback|Я подтянула твоих синих.
+rosie.swap|Два ствола. Меняй!
+rosie.free|Попробуй, за счёт заведения!
+rosie.sentry|Возьми мою турель!
+rosie.armour|Броня! Ствол побольше!
+intro.peasant|Крестьяне: лёгкое золото!
+intro.footman|Пехота: гранаты по строю!
+intro.captain|Капитан: они побегут!
+intro.eliteCaptain|Элитный капитан: большое бегство!
+intro.archer|Лучники: доберись до них!
+intro.shieldWall|Стена щитов: обойди!
+intro.grudge|Сэр Грудж: бей по бокам!
+intro.rider|Всадники: дробовик их остановит!
+intro.firebrand|Поджигатель: стреляй заранее!
+intro.manAtArms|Латники: бери винтовки!
+intro.warWagon|Боевая повозка: ломай колёса!
+intro.brute|Громила: уходи от рывка!
+intro.ram|Таран: сбей расчёт!
+intro.catapult|Катапульта: следи за тенями!
+intro.siegeTower|Осадная башня: стреляй по балкам!
+intro.ironOx|Железный бык: уходи от огня!
+boss.grudge|Сэр Грудж
+boss.wagon|Боевая повозка
+boss.tower|Осадная башня
+boss.ox|Железный барон
+pause.settings|Настройки
+pause.leave|Покинуть битву?
+pause.leaveYes|Покинуть
+pause.leaveNo|Остаться
+pause.keepGold|Золото останется у тебя
+settings.title|Настройки
+settings.back|Назад
+settings.sound|Звук
+settings.music|Музыка
+settings.sensitivity|Скорость обзора
+settings.invertY|Инверсия обзора
+settings.autoFireMouse|Автоогонь (мышь)
+settings.autoFireTouch|Автоогонь
+settings.aimAssist|Помощь в прицеливании
+settings.waveIntros|Заставки волн
+settings.shake|Тряска камеры
+settings.graphics|Графика
+settings.hudScale|Размер интерфейса
+settings.leftHanded|Левша
+settings.vibration|Вибрация
+settings.reducedMotion|Меньше движения
+settings.language|Язык
+settings.credits|Авторы
+credits.models|3D-модели
+credits.sound|Звук и музыка
+credits.rest|Всё остальное сделано для этой игры.
+value.on|Вкл.
+value.off|Выкл.
+value.normal|Обычный
+value.strong|Сильный
+value.full|Полный
+value.short|Короткий
+value.low|Низкий
+value.lowest|Минимум
+value.high|Высокий
+value.auto|Авто
+battle.title|Битва {n}: {name}
+battle.wave|Волна {n}/{total}
+battle.ready|Приготовься!
+battle.cleared|Волна отбита! +{gold}
+battle.truck|Пикап Рози открыт
+battle.atBanner|Они у знамени!
+battle.knocked|Подъём через {s}
+battle.rout|БЕГСТВО!
+battle.lastShop|Последняя покупка перед боссом!
+battle.bossHalf|Он бросил щит!
+battle.wagonStall|Повозка встала! Пехота!
+battle.towerStall|Башня встала! Бей по балкам!
+battle.oxSummon|Идут элитные капитаны!
+laststand.title|Последний рубеж: {name}
+laststand.wave|Волна {n} · рекорд {best}
+laststand.waveFirst|Волна {n}
+laststand.next|Идёт волна {n}!
+laststand.over|Знамя пало!
+laststand.held|Отбито волн: {n}
+laststand.bestLabel|Рекорд
+laststand.gold|Золото сохранено
+laststand.newBest|Новый рекорд!
+laststand.again|Ещё раз
+map.lastStand|Последний рубеж
+map.lastStandBest|Последний рубеж · {n}
+battle.oxCore|Ядро! Ракеты!
+battle.baronFlees|Барон удирает!
+rosie.donkey|Это был... осёл?
+ending.ada|Королева Ада
+ending.rosie|Рози
+ending.line1|У тебя получилось! Ларкмур свободен!
+ending.line2|А Барон удрал на осле.
+ending.line3|Он вернётся. Будешь охранять наши поля?
+ending.line4|Бесконечные волны? Пикап будет на ходу!
+ending.skip|Пропустить
+ending.title|Ларкмур свободен!
+ending.unlock|Последний рубеж открыт
+ending.unlockHint|Бесконечные волны на любом выигранном поле
+ending.toMap|На карту
+victory.title|Победа!
+victory.kills|Нокауты
+victory.waves|Бонусы за волны
+victory.firstClear|Первая победа
+continue|Дальше
+defeat.title|Знамя пало!
+defeat.keep|Золото остаётся: +{gold}
+retry|Заново
+map|Карта
+offer.double|Двойное золото
+offer.rally|Сплотиться
+offer.open|Открыть
+offer.noThanks|Нет, спасибо
+offer.crate|Одолжить: {gun}?
+offer.crateText|На одну волну
+victory.doubled|Удвоено!
+battle.rallied|Сплотились!
+battle.loan|{gun} на одну волну!
+rosie.crate|Что-то упало!
+rosie.saving|Копишь на это?
+pause.retreat|На карту
+map.title|Ларкмур
+map.fight|В бой!
+map.truck|Пикап
+map.waves|Волн: {n}
+map.firstClear|Первая победа +{gold}
+map.locked|Сначала выиграй битву {n}
+map.soon|Скоро
+map.new|Новое: {what}
+region.1|Луга Ларкмура
+region.2|Речной край
+region.3|Горный перевал
+region.4|Железная крепость
+ada.region.1|Защити луга, чужестранец!
+ada.region.2|Его всадники переходят реку!
+ada.region.3|Его осадные машины ползут на перевал!
+ada.region.4|Теперь идём на его крепость!
+ada.end.1|Луга свободны! К реке!
+ada.end.2|Река наша! Теперь нагорье.
+ada.end.3|Перевал наш! Осталась лишь его крепость.
+ada.free|Ларкмур свободен. Спасибо, Thunder Knight!
+battle.name.1|Мельница
+battle.name.2|Репное поле
+battle.name.3|Каменный мост
+battle.name.4|Ферма в лощине
+battle.name.5|Холм Груджа
+battle.name.6|Камышовый брод
+battle.name.7|Болотная деревня
+battle.name.8|Паром
+battle.name.9|Ивовый частокол
+battle.name.10|Долгая дорога
+battle.name.11|Сосновые ворота
+battle.name.12|Старый дозор
+battle.name.13|Приют пастуха
+battle.name.14|Утёс
+battle.name.15|Перевал Эха
+battle.name.16|Сгоревший сад
+battle.name.17|Дорога у рва
+battle.name.18|Надвратная башня
+battle.name.19|Внутренний двор
+battle.name.20|Железная крепость
+battle.new.1|Крестьяне и их капитан
+battle.new.2|Пехота, гранаты, ополчение
+battle.new.3|Лучники, вкладка «Герой», знамя
+battle.new.4|Стена щитов, дробовик, ящик
+battle.new.5|Сэр Грудж
+battle.new.6|Всадники, пистолет-пулемёт, второе оружие
+battle.new.7|Поджигатели
+battle.new.8|Удар разлома, автомат
+battle.new.9|Латники
+battle.new.10|Боевая повозка
+battle.new.11|Громила
+battle.new.12|Таран, пулемёт
+battle.new.13|Рыцари, турель
+battle.new.14|Катапульты, гранатомёт
+battle.new.15|Осадная башня
+battle.new.16|Миниган
+battle.new.17|Тараны и катапульты
+battle.new.18|Элитные капитаны, ракеты
+battle.new.19|Всё сразу
+battle.new.20|Железный барон
+shop.title|Пикап Рози
+shop.rosie|Прямо из разлома!
+shop.tab.guns|Оружие
+shop.tab.hero|Герой
+shop.tab.army|Армия
+shop.close|Закрыть
+shop.more|Ещё {gold}
+shop.equip|Взять
+shop.equipped|Взято
+shop.max|Макс.
+shop.locked|Битва {n}
+shop.best|Выгодно
+shop.goal|Копи на это
+shop.levelUp|Бьёт сильнее, вмещает больше
+gun.pistol|Пистолет
+gun.shotgun|Дробовик
+gun.smg|Пистолет-пулемёт
+gun.assaultRifle|Автомат
+gun.huntingRifle|Охотничья винтовка
+gun.machineGun|Пулемёт
+gun.grenadeLauncher|Гранатомёт
+gun.minigun|Миниган
+gun.rocketLauncher|Ракетомёт
+gun.pistol.note|Лёгкий и надёжный
+gun.shotgun.note|Отбрасывает вблизи
+gun.smg.note|Быстро поливает толпу
+gun.assaultRifle.note|Пробивает 2 солдат
+gun.huntingRifle.note|Пробивает 6 солдат
+gun.machineGun.note|Держит целую полосу
+gun.grenadeLauncher.note|Рвётся в толпе
+gun.minigun.note|Стена пуль
+gun.rocketLauncher.note|Для крупных целей
+hero.health|Стойкость
+hero.health.note|+20 здоровья
+hero.speed|Сапоги
+hero.speed.note|Бегай быстрее
+hero.grenades|Пояс гранат
+hero.grenades.note|+1 граната за волну
+hero.magnet|Магнит золота
+hero.magnet.note|Монеты летят издалека
+army.militia|Ополчение
+army.militia.note|+2 солдата у знамени
+army.archers|Лучники
+army.archers.note|Залпы из-за знамени
+army.menAtArms|Латники
+army.menAtArms.note|Строй в доспехах
+support.riftStrike|Удар разлома
+support.riftStrike.note|Снаряды сыплются на толпу (E)
+support.sentryGun|Турель
+support.sentryGun.note|Турель сражается рядом (E)
+army.knights|Рыцари
+army.knights.note|Всадники в атаку
+army.banner|Знамя
+army.banner.note|+20% здоровья знамени
+error.start|Игра не запустилась на этом устройстве. Попробуйте другой браузер или обновите этот.
+error.noSave|В этом окне браузера прогресс не сохраняется.

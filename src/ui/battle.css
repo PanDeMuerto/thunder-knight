@@ -1,0 +1,1020 @@
+/*
+ * Battle screens (M3): the battle HUD, Rosie's shop panel, the result cards and the campaign map. Same rules as
+ * styles.css: every size is calc(N * var(--s) * 1px), touch targets at least 48 px, the HUD small and at the edges.
+ */
+
+/* ---- Battle HUD (GDD §15.3–15.4) ---- */
+.battle-hud {
+  position: absolute;
+  inset: 0;
+}
+
+.hud-gold {
+  position: absolute;
+  top: var(--safe-top);
+  left: calc(var(--safe-left) + max(48px, calc(48 * var(--s) * 1px)) + 10px);
+  height: max(48px, calc(48 * var(--s) * 1px));
+  display: flex;
+  align-items: center;
+  gap: calc(6 * var(--s) * 1px);
+  padding: 0 calc(12 * var(--s) * 1px);
+  border-radius: 999px;
+  background: var(--panel-light);
+  font-size: calc(20 * var(--s) * 1px);
+  font-weight: 600;
+}
+
+#game.is-touch:not(.is-portrait) .hud-gold {
+  left: calc(var(--safe-left) + 52px + max(48px, calc(48 * var(--s) * 1px)) + 10px);
+}
+
+.hud-gold-icon {
+  display: inline-grid;
+  flex: none;
+  width: calc(22 * var(--s) * 1px);
+  height: calc(22 * var(--s) * 1px);
+  color: var(--gold);
+}
+
+.hud-gold-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hud-gold.is-up {
+  animation: hud-pop 0.25s ease-out;
+}
+
+@keyframes hud-pop {
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.hud-top {
+  position: absolute;
+  top: var(--safe-top);
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  /* M11: a long toast in another language may not widen the column (the bars went under Poki's pill). */
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: calc(4 * var(--s) * 1px);
+  width: calc(230 * var(--s) * 1px);
+}
+
+/* A tight screen: the bars move to the top right, clear of the gold (BattleHud.fit) and of Poki's pill on a phone. */
+.hud-top.is-right {
+  left: auto;
+  right: var(--top-right);
+  transform: none;
+}
+
+/* Portrait: the bars sit under the gold row, clear of Poki's pill (30% down on the right). */
+#game.is-portrait .hud-top {
+  top: calc(var(--safe-top) + max(48px, calc(48 * var(--s) * 1px)) + 8px);
+}
+
+.hud-wave {
+  font-size: calc(15 * var(--s) * 1px);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.hud-bars {
+  display: grid;
+  gap: calc(5 * var(--s) * 1px);
+  width: 100%;
+}
+
+.hud-bar,
+.hud-health {
+  display: flex;
+  align-items: center;
+  gap: calc(6 * var(--s) * 1px);
+}
+
+.hud-bar-icon {
+  display: inline-grid;
+  flex: none;
+  width: calc(18 * var(--s) * 1px);
+  height: calc(18 * var(--s) * 1px);
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
+}
+
+.hud-bar-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hud-bar-track {
+  position: relative;
+  flex: 1;
+  height: calc(9 * var(--s) * 1px);
+  border-radius: 999px;
+  background: rgba(20, 24, 30, 0.42);
+  overflow: hidden;
+}
+
+.hud-bar-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  transform-origin: 0 50%;
+  transition: transform 0.2s linear;
+}
+
+.hud-banner .hud-bar-icon {
+  color: #7fa8f0;
+}
+
+.hud-banner .hud-bar-fill {
+  background: #4f86e6;
+}
+
+.hud-banner.is-hurt .hud-bar-track {
+  animation: hud-hurt 0.6s ease-in-out infinite;
+}
+
+.hud-enemies .hud-bar-icon {
+  color: #f08a7f;
+}
+
+.hud-enemies .hud-bar-fill {
+  background: var(--red);
+}
+
+/* A boss wave: the boss's name over his health bar, in place of the wave count (GDD §9.3). */
+.hud-boss-name {
+  display: none;
+  font-size: calc(16 * var(--s) * 1px);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hud-top.has-boss .hud-wave {
+  display: none;
+}
+
+.hud-top.has-boss .hud-boss-name {
+  display: block;
+}
+
+.hud-enemies.is-boss .hud-bar-track {
+  height: calc(12 * var(--s) * 1px);
+}
+
+.hud-enemies.is-boss .hud-bar-fill {
+  background: #b8352c;
+}
+
+.hud-enemies.is-boss .hud-bar-icon {
+  color: #e7e2ea;
+}
+
+@keyframes hud-hurt {
+  50% {
+    box-shadow: 0 0 0 calc(2 * var(--s) * 1px) rgba(255, 250, 240, 0.7);
+  }
+}
+
+.hud-toast {
+  margin-top: calc(2 * var(--s) * 1px);
+  padding: calc(6 * var(--s) * 1px) calc(14 * var(--s) * 1px);
+  border-radius: calc(16 * var(--s) * 1px);
+  background: var(--panel);
+  font-size: calc(17 * var(--s) * 1px);
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* M11: a toast too long for the bars' width even in a smaller font (BattleHud.fitToast) takes a second line. */
+.hud-toast.is-wrapped {
+  white-space: normal;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.hud-toast.is-in {
+  animation: hud-toast-in 0.3s ease-out;
+}
+
+@keyframes hud-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.hud-health {
+  position: absolute;
+  left: var(--safe-left);
+  bottom: var(--safe-bottom);
+  width: calc(150 * var(--s) * 1px);
+  color: #ff8f86;
+}
+
+/* Coral rather than deep red: red-weak eyes see a deep red as dark, close to the track (M11). */
+.hud-health .hud-bar-fill {
+  background: #ff7566;
+}
+
+.hud-health.is-low .hud-bar-track {
+  animation: hud-hurt 0.8s ease-in-out infinite;
+}
+
+.btn-next {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--safe-bottom) + 20 * var(--s) * 1px);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--s) * 1px);
+  min-height: max(56px, calc(56 * var(--s) * 1px));
+  padding: 0 calc(22 * var(--s) * 1px);
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--ink);
+  font-size: calc(20 * var(--s) * 1px);
+  font-weight: 600;
+  cursor: pointer;
+  pointer-events: auto;
+  animation: next-breathe 1.6s ease-in-out infinite;
+}
+
+.btn-next-icon {
+  display: inline-grid;
+  width: calc(22 * var(--s) * 1px);
+  height: calc(22 * var(--s) * 1px);
+}
+
+.btn-next-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes next-breathe {
+  50% {
+    transform: translateX(-50%) scale(1.04);
+  }
+}
+
+/* Portrait: above the thumbs (GDD §4.7). */
+#game.is-portrait .btn-next {
+  bottom: calc(var(--safe-bottom) + 34%);
+}
+
+.key-cap {
+  padding: calc(2 * var(--s) * 1px) calc(6 * var(--s) * 1px);
+  border-radius: calc(5 * var(--s) * 1px);
+  border: 1px solid rgba(35, 38, 43, 0.4);
+  font-size: calc(12 * var(--s) * 1px);
+  opacity: 0.75;
+}
+
+#game.is-touch .key-cap {
+  display: none;
+}
+
+.hud-knocked {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--safe-bottom) + 96 * var(--s) * 1px);
+  transform: translateX(-50%);
+  padding: calc(8 * var(--s) * 1px) calc(16 * var(--s) * 1px);
+  border-radius: 999px;
+  background: var(--panel);
+  font-size: calc(18 * var(--s) * 1px);
+  font-weight: 600;
+}
+
+/* Knocked out: the world gently loses its colour (no red flash, GDD §4.6). */
+#view {
+  transition: filter 0.6s ease;
+}
+
+#game.is-down #view {
+  filter: saturate(0.25) brightness(0.92);
+}
+
+/* The grenade count on its button; on a computer the button is a small read-out (G throws). */
+.btn-count {
+  position: absolute;
+  right: calc(-2 * var(--s) * 1px);
+  top: calc(-2 * var(--s) * 1px);
+  min-width: calc(22 * var(--s) * 1px);
+  padding: 0 calc(5 * var(--s) * 1px);
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: calc(14 * var(--s) * 1px);
+  font-weight: 700;
+  line-height: calc(22 * var(--s) * 1px);
+}
+
+.btn-count:empty {
+  display: none;
+}
+
+.btn.is-empty {
+  opacity: 0.45;
+}
+
+#game:not(.is-touch) .action-pad .btn-grenade:not(.is-hidden) {
+  display: grid;
+  width: calc(46 * var(--s) * 1px);
+  height: calc(46 * var(--s) * 1px);
+  background: var(--panel-light);
+  pointer-events: none;
+}
+
+/* With the shop docked, the field's own HUD steps back: the shop shows the gold, a break needs no bars, and the Next
+   wave button moves into the part of the screen still showing the field. */
+#game.is-shop-open .hud-top,
+#game.is-shop-open .hud-gold,
+#game.is-shop-open .hud-health,
+#game.is-shop-open .nameplate,
+#game.is-shop-open .action-pad {
+  display: none;
+}
+
+#game.is-shop-open:not(.is-portrait) .btn-next {
+  left: calc((100% - var(--shop-w) - var(--shop-right)) / 2);
+  /* M11: a longer "Next wave" (Italian, Spanish) wraps rather than reach under the shop on a small phone. */
+  max-width: calc(100% - var(--shop-w) - var(--shop-right) - var(--safe-left) - 16px);
+  box-sizing: border-box;
+}
+
+.btn-next-text {
+  line-height: 1.1;
+  text-align: left;
+}
+
+#game.is-shop-open.is-portrait .btn-next {
+  bottom: calc(min(62%, 70% - 70px) + var(--safe-bottom) + 12px);
+}
+
+
+/* ---- Rosie's shop: docked (GDD §12.1), right side in landscape, a bottom sheet in portrait ---- */
+/* The docked width leaves room on the left for the field and the Next wave button, even on a small phone. */
+#game {
+  /* The map's head row: the gold pill grows with the HUD scale. */
+  --map-head: max(56px, calc(48 * var(--s) * 1px + 8px));
+  --shop-w: min(max(360px, 42%), calc(100% - 270px));
+  --shop-right: var(--safe-right);
+}
+
+/* A landscape phone: Poki's pill sits in a top corner, so the shop keeps clear of the right one. */
+#game.is-touch:not(.is-portrait) {
+  --shop-right: calc(var(--safe-right) + 52px);
+}
+
+.shop {
+  position: absolute;
+  top: var(--safe-top);
+  right: var(--shop-right);
+  bottom: var(--safe-bottom);
+  width: var(--shop-w);
+  max-width: calc(100% - 2 * var(--safe-right));
+  display: flex;
+  flex-direction: column;
+  border-radius: calc(18 * var(--s) * 1px);
+  background: rgba(24, 30, 40, 0.86);
+  border: calc(2 * var(--s) * 1px) solid var(--edge);
+  pointer-events: auto;
+  z-index: 15;
+  overflow: hidden;
+}
+
+/* Portrait: a bottom sheet whose top stays under Poki's pill (30% down, 62 px tall). */
+#game.is-portrait .shop {
+  top: auto;
+  left: var(--safe-left);
+  right: var(--safe-right);
+  width: auto;
+  max-width: none;
+  height: min(62%, 70% - 70px);
+}
+
+.shop-head {
+  display: flex;
+  align-items: center;
+  gap: calc(10 * var(--s) * 1px);
+  padding: calc(12 * var(--s) * 1px) calc(14 * var(--s) * 1px) calc(6 * var(--s) * 1px);
+}
+
+.shop-titles {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-title {
+  font-size: calc(20 * var(--s) * 1px);
+  font-weight: 600;
+}
+
+.shop-rosie {
+  font-size: calc(14 * var(--s) * 1px);
+  opacity: 0.75;
+}
+
+.shop-gold {
+  display: flex;
+  align-items: center;
+  gap: calc(6 * var(--s) * 1px);
+  font-size: calc(22 * var(--s) * 1px);
+  font-weight: 600;
+}
+
+.shop-close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 250, 240, 0.12);
+  color: var(--cream);
+  cursor: pointer;
+}
+
+.shop-close svg {
+  width: 22px;
+  height: 22px;
+}
+
+.shop-tabs {
+  display: flex;
+  gap: calc(6 * var(--s) * 1px);
+  padding: 0 calc(12 * var(--s) * 1px) calc(8 * var(--s) * 1px);
+}
+
+.shop-tab {
+  position: relative;
+  flex: 1;
+  /* M11: a tab's name doesn't break mid-word (Japanese broke ヒーロー). */
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(6 * var(--s) * 1px);
+  min-height: 48px;
+  border: 0;
+  border-radius: calc(12 * var(--s) * 1px);
+  background: rgba(255, 250, 240, 0.1);
+  color: var(--cream);
+  font-size: calc(16 * var(--s) * 1px);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shop-tab.is-on {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.shop-tab-icon {
+  display: inline-grid;
+  width: calc(18 * var(--s) * 1px);
+  height: calc(18 * var(--s) * 1px);
+}
+
+.shop-tab-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-dot {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.shop-list {
+  flex: 1;
+  overflow-y: auto;
+  display: grid;
+  align-content: start;
+  gap: calc(8 * var(--s) * 1px);
+  padding: calc(6 * var(--s) * 1px) calc(12 * var(--s) * 1px) calc(12 * var(--s) * 1px);
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+}
+
+.shop-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: calc(10 * var(--s) * 1px);
+  padding: calc(10 * var(--s) * 1px);
+  border-radius: calc(14 * var(--s) * 1px);
+  background: rgba(255, 250, 240, 0.08);
+}
+
+.shop-card.is-best {
+  box-shadow: inset 0 0 0 calc(2 * var(--s) * 1px) var(--gold);
+}
+
+.shop-card.is-locked,
+.shop-card.is-expensive {
+  opacity: 0.62;
+}
+
+.shop-card-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: calc(44 * var(--s) * 1px);
+  height: calc(44 * var(--s) * 1px);
+  border-radius: calc(10 * var(--s) * 1px);
+  background: rgba(255, 250, 240, 0.12);
+}
+
+.shop-card-icon svg {
+  width: 62%;
+  height: 62%;
+}
+
+.shop-card-icon .gun-art {
+  width: 86%;
+  height: 43%;
+}
+
+.shop-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-card-name {
+  font-size: calc(17 * var(--s) * 1px);
+  font-weight: 600;
+}
+
+.shop-pips {
+  margin-left: calc(6 * var(--s) * 1px);
+  color: var(--gold);
+  font-size: calc(13 * var(--s) * 1px);
+  letter-spacing: 1px;
+}
+
+.shop-card-note {
+  font-size: calc(14 * var(--s) * 1px);
+  opacity: 0.8;
+}
+
+.shop-badge {
+  display: inline-block;
+  margin-top: calc(3 * var(--s) * 1px);
+  padding: 0 calc(6 * var(--s) * 1px);
+  border-radius: 999px;
+  background: rgba(127, 168, 240, 0.3);
+  font-size: calc(12 * var(--s) * 1px);
+}
+
+.shop-ribbon {
+  position: absolute;
+  top: calc(-6 * var(--s) * 1px);
+  right: calc(10 * var(--s) * 1px);
+  padding: 0 calc(8 * var(--s) * 1px);
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--ink);
+  font-size: calc(12 * var(--s) * 1px);
+  font-weight: 700;
+}
+
+.shop-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(4 * var(--s) * 1px);
+  flex: none;
+  min-width: calc(92 * var(--s) * 1px);
+  min-height: 48px;
+  padding: 0 calc(10 * var(--s) * 1px);
+  border: 0;
+  border-radius: calc(12 * var(--s) * 1px);
+  background: var(--primary);
+  color: var(--ink);
+  font-size: calc(16 * var(--s) * 1px);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.shop-buy:disabled {
+  background: rgba(255, 250, 240, 0.16);
+  color: var(--cream);
+  cursor: default;
+}
+
+.shop-card.is-equip .shop-buy {
+  background: #7fa8f0;
+}
+
+.shop-coin {
+  display: inline-grid;
+  width: calc(16 * var(--s) * 1px);
+  height: calc(16 * var(--s) * 1px);
+  color: #b07a00;
+}
+
+.shop-card.is-expensive .shop-coin {
+  color: var(--gold);
+}
+
+.shop-coin svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Cards: a second button, crowns, gold rows (GDD §15.5) ---- */
+.btn-second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(6 * var(--s) * 1px);
+  min-height: max(48px, calc(48 * var(--s) * 1px));
+  border: calc(2 * var(--s) * 1px) solid var(--edge);
+  border-radius: calc(14 * var(--s) * 1px);
+  background: transparent;
+  color: var(--cream);
+  font-family: inherit;
+  font-size: calc(18 * var(--s) * 1px);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-icon {
+  display: inline-grid;
+  width: calc(20 * var(--s) * 1px);
+  height: calc(20 * var(--s) * 1px);
+}
+
+.btn-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-main:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.result-crowns {
+  display: flex;
+  justify-content: center;
+  gap: calc(6 * var(--s) * 1px);
+}
+
+.result-crown {
+  display: inline-grid;
+  width: calc(38 * var(--s) * 1px);
+  height: calc(38 * var(--s) * 1px);
+  color: rgba(255, 250, 240, 0.25);
+}
+
+.map-card-facts .result-crown {
+  width: calc(24 * var(--s) * 1px);
+  height: calc(24 * var(--s) * 1px);
+}
+
+.result-crown.is-on {
+  color: var(--gold);
+}
+
+.result-crown svg {
+  width: 100%;
+  height: 100%;
+}
+
+.result-rows {
+  display: grid;
+  gap: calc(4 * var(--s) * 1px);
+  font-size: calc(16 * var(--s) * 1px);
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: calc(16 * var(--s) * 1px);
+}
+
+.result-gold,
+.result-total {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(5 * var(--s) * 1px);
+}
+
+.result-total {
+  font-size: calc(24 * var(--s) * 1px);
+  font-weight: 600;
+}
+
+/* ---- The campaign map (GDD §13.1), a placeholder parchment until M7 ---- */
+.map {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 45%, #f4ead2, #dccaa2);
+  color: var(--ink);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.map-head {
+  position: absolute;
+  top: var(--safe-top);
+  left: var(--safe-left);
+  right: var(--safe-right);
+  display: flex;
+  align-items: center;
+  gap: calc(14 * var(--s) * 1px);
+  z-index: 1;
+}
+
+.map-gold {
+  position: static;
+  color: var(--cream);
+  background: rgba(60, 46, 26, 0.75);
+}
+
+.map-title {
+  font-size: calc(24 * var(--s) * 1px);
+  font-weight: 600;
+  color: #5b4428;
+}
+
+/* The road fills what the card leaves (landscape: the left; portrait: the top, see below). */
+.map-svg {
+  position: absolute;
+  left: var(--safe-left);
+  top: calc(var(--safe-top) + var(--map-head));
+  width: calc(64% - var(--safe-left) - var(--safe-right) - 12px);
+  height: calc(100% - var(--safe-top) - var(--map-head) - var(--safe-bottom));
+}
+
+#game.is-touch:not(.is-portrait) .map-svg {
+  left: calc(var(--safe-left) + 52px);
+  width: calc(64% - var(--safe-left) - var(--safe-right) - 116px);
+}
+
+.map-road {
+  fill: none;
+  stroke: #b89a68;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 2 16;
+}
+
+.map-region {
+  font: 600 22px var(--font);
+  fill: #6b5638;
+  opacity: 0.8;
+}
+
+.map-node {
+  cursor: pointer;
+}
+
+/* Region 1's landmarks (placeholder line drawings until the painted map, M7). */
+.map-landmark {
+  fill: #8f7b58;
+  stroke: #8f7b58;
+  stroke-linecap: round;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+/* A finger-sized hit area around each node (44 px on the smallest phone). */
+.map-hit {
+  fill: transparent;
+}
+
+.map-node > circle:first-child {
+  fill: #c9bba0;
+  stroke: #8f7b58;
+  stroke-width: 3;
+}
+
+.map-node text {
+  font: 600 22px var(--font);
+  fill: #6b5638;
+  pointer-events: none;
+}
+
+.map-node.is-open > circle:first-child {
+  fill: #fffaf0;
+  stroke: #5b4428;
+}
+
+.map-node.is-won > circle:first-child {
+  fill: #9cc5f0;
+}
+
+.map-node.is-next > circle:first-child {
+  animation: map-next 1.4s ease-in-out infinite;
+}
+
+.map-node.is-selected > circle:first-child {
+  stroke: var(--gold);
+  stroke-width: 6;
+}
+
+@keyframes map-next {
+  50% {
+    fill: #fbe6a6;
+  }
+}
+
+.map-crown {
+  fill: rgba(91, 68, 40, 0.25);
+}
+
+.map-crown.is-on {
+  fill: var(--gold);
+  stroke: #8a6410;
+  stroke-width: 1.5;
+}
+
+.map-card {
+  position: absolute;
+  box-sizing: border-box;
+  right: var(--safe-right);
+  top: calc(var(--safe-top) + var(--map-head));
+  bottom: var(--safe-bottom);
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(10 * var(--s) * 1px);
+  padding: calc(18 * var(--s) * 1px);
+  border-radius: calc(18 * var(--s) * 1px);
+  background: rgba(24, 30, 40, 0.86);
+  color: var(--cream);
+  overflow-y: auto;
+}
+
+/* A landscape phone: the head and the card keep clear of Poki's pill in the top corners. */
+#game.is-touch:not(.is-portrait) .map-head {
+  left: calc(var(--safe-left) + 52px);
+}
+
+#game.is-touch:not(.is-portrait) .map-card {
+  right: calc(var(--safe-right) + 52px);
+}
+
+/* Portrait: a column of the head, the road and the card, the card as tall as its buttons need. */
+.map.is-portrait {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 * var(--s) * 1px);
+  padding: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
+  box-sizing: border-box;
+}
+
+.map.is-portrait .map-head,
+.map.is-portrait .map-svg,
+.map.is-portrait .map-card {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.map.is-portrait .map-svg {
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+/* A portrait phone: the road keeps clear of Poki's pill, 46 px wide at either edge (M11: a tall card with Queen Ada's
+   line squeezed the road until a battle sat under it). */
+#game.is-touch .map.is-portrait .map-svg {
+  margin-inline: max(0px, calc(46px - var(--safe-left)));
+}
+
+.map.is-portrait .map-card {
+  flex: none;
+  max-height: 58%;
+}
+
+.map-card-region {
+  font-size: calc(14 * var(--s) * 1px);
+  opacity: 0.7;
+}
+
+.map-card-title {
+  font-size: calc(22 * var(--s) * 1px);
+  font-weight: 600;
+}
+
+.map-card-facts {
+  display: grid;
+  gap: calc(4 * var(--s) * 1px);
+  font-size: calc(16 * var(--s) * 1px);
+}
+
+.map-card-facts .result-crowns {
+  justify-content: flex-start;
+}
+
+.map-card-bonus {
+  color: var(--gold);
+}
+
+/* Queen Ada's line (M11): her face and a few words, quiet under the facts. */
+.map-ada {
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--s) * 1px);
+  font-size: calc(15 * var(--s) * 1px);
+  font-style: italic;
+  line-height: 1.25;
+  opacity: 0.92;
+}
+
+.map-ada-face {
+  display: inline-grid;
+  flex: none;
+  width: calc(30 * var(--s) * 1px);
+  height: calc(30 * var(--s) * 1px);
+}
+
+.map-ada-face svg {
+  width: 100%;
+  height: 100%;
+}
+
+.map-card-buttons {
+  margin-top: auto;
+  display: grid;
+  gap: calc(8 * var(--s) * 1px);
+}
+
+/* ---- Rewarded offers (GDD §16, Poki rules): after a standard choice at least as large, the video mark, the reward
+   colour (never green). As tall as .btn-second, so every standard button is equal or larger. ---- */
+.btn-reward {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(8 * var(--s) * 1px);
+  min-height: max(48px, calc(48 * var(--s) * 1px));
+  border: 0;
+  border-radius: calc(14 * var(--s) * 1px);
+  background: var(--reward);
+  color: var(--cream);
+  font-family: inherit;
+  font-size: calc(18 * var(--s) * 1px);
+  font-weight: 600;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.btn-reward .btn-icon {
+  width: calc(22 * var(--s) * 1px);
+  height: calc(22 * var(--s) * 1px);
+}
+
+.btn-reward:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn-reward:focus-visible {
+  outline: calc(3 * var(--s) * 1px) solid var(--cream);
+  outline-offset: 2px;
+}
+
+/* The crate's offer: No thanks is the standard choice here, as tall as the rewarded one. */
+.card-offer .btn-second {
+  width: 100%;
+}
+
+/* ×2 gold: a stamp beside the total as it counts up again. */
+.result-stamp {
+  margin-left: calc(8 * var(--s) * 1px);
+  padding: calc(2 * var(--s) * 1px) calc(8 * var(--s) * 1px);
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--ink);
+  font-size: calc(15 * var(--s) * 1px);
+}
+
+.result-stamp.is-in {
+  animation: stamp-in 0.35s ease-out;
+}
+
+@keyframes stamp-in {
+  from {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}

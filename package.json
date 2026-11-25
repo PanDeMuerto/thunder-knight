@@ -1,0 +1,59 @@
+{
+  "name": "thunder-knight",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Casual third-person wave shooter for the web: one stranger with modern guns holds the banner against a medieval army.",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build --mode poki && node tools/check-size.mjs",
+    "build:itch": "npm run typecheck && vite build --mode web --outDir dist-itch --emptyOutDir && node tools/check-size.mjs dist-itch",
+    "package": "npm run build && python -I tools/package.py poki",
+    "package:itch": "npm run build:itch && python -I tools/package.py itch",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,css}\" \"tests/**/*.ts\" \"tools/**/*.{ts,mjs}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "qa:poki": "node tools/qa/run-poki.mjs",
+    "shots": "node tools/qa/shots.mjs",
+    "record": "node tools/qa/record.mjs",
+    "assets:soldiers": "node tools/assets/soldiers.mjs",
+    "assets:field": "node tools/assets/field.mjs",
+    "assets:hero": "node tools/assets/hero.mjs",
+    "audio": "python tools/audio/build_audio.py",
+    "perf": "node tools/qa/perf.mjs",
+    "qa:feet": "node tools/qa/feet.mjs",
+    "balance": "vite-node tools/balance/simulate.ts",
+    "qa:battles": "node tools/qa/run-battles.mjs",
+    "qa": "node tools/qa/run-qa.mjs",
+    "qa:hud": "node tools/qa/run-hud.mjs",
+    "qa:build": "node tools/qa/run-build.mjs",
+    "thumbs": "node tools/qa/thumbnails.mjs",
+    "qa:edges": "node tools/qa/run-edges.mjs",
+    "qa:soak": "node tools/qa/soak.mjs"
+  },
+  "dependencies": {
+    "@fontsource/fredoka": "^5.3.0",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@gltf-transform/core": "^4.5.1",
+    "@gltf-transform/functions": "^4.5.1",
+    "@types/node": "^24.0.0",
+    "@types/three": "^0.187.0",
+    "eslint": "^10.0.0",
+    "playwright": "^1.64.1",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.0",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5",
+    "vite-node": "*",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
